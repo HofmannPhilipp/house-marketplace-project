@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {ReactComponent as PersonIcon} from "../assets/svg/personIcon.svg"
 import {ReactComponent as LockIcon} from "../assets/svg/lockIcon.svg"
-
+import {ReactComponent as VisibilityIcon} from "../assets/svg/visibilityIcon.svg"
 const SignUp = () => {
+  const [showPassword, setShowPassword] = useState(false)
   return (
     <>
     <header className=''>
@@ -13,7 +14,7 @@ const SignUp = () => {
             <PersonIcon className='mx-3'/>
             <input type="text" placeholder='Email' className='outline-0 w-4/5'/>
             </div>
-            <div className='flex bg-white py-1 rounded-full'><LockIcon className='mx-3'/><input type="text" placeholder='Password' className='outline-0 w-4/5'/></div></form>
+            <div className='flex bg-white py-1 rounded-full'><LockIcon className='mx-3'/><input type="text" placeholder='Password' className='outline-0 w-4/5'/><VisibilityIcon className={showPassword?"visibilityIcon":"visibilityIcon fill-slate-300"} onClick={()=> setShowPassword((prevState)=>!prevState)}/></div></form>
       </div>
       
     </header>

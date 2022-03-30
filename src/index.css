@@ -9,4 +9,7 @@
   .navIcon {
     @apply text-2xl hover:scale-110 transition duration-200 ease-out;
   }
+  .visibilityIcon {
+    @apply hover:scale-110 transition duration-200 cursor-pointer;
+  }
 }
