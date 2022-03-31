@@ -12,4 +12,7 @@
   .visibilityIcon {
     @apply hover:scale-110 transition duration-200 cursor-pointer;
   }
+  body{
+    background-color: #f2f4f8;
+  }
 }
